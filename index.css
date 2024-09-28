@@ -1,0 +1,195 @@
+:root {
+    --Violet: hsl(263, 55%, 52%);
+    --GrayBlue: hsl(217, 19%, 35%);
+    --BlackBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayBlue: hsl(210, 46%, 95%);
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECF2F8;
+    padding: 10.25rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "one one two five"
+    "three four four five";
+    gap: 1.5rem 1.875rem;
+
+
+}
+
+.profile__photo {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.625rem;
+    left: 2rem;
+}
+
+.quotation__photo {
+    position: absolute;
+    width: 6.5rem;
+    height: 6.375rem;
+    right: 5rem;
+    z-index: 0;
+    
+}
+
+h1, h2 {
+    
+    padding-left: 2.8125rem;
+    
+}
+
+h1 {
+    margin-top: 0.25rem;
+}
+
+h2 {
+    padding-bottom: 1.125rem;
+}
+
+.testimonials__one {
+    grid-area: one;
+    background-color: var(--Violet);
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+
+ 
+}
+
+.testimonials__two {
+    grid-area: two;
+    background-color: var(--GrayBlue);
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.testimonials__three {
+    grid-area: three;
+    background-color: var(--White);
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.testimonials__four {
+    grid-area: four;
+    background-color: var(--BlackBlue);
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.testimonials__five {
+    grid-area: five;
+    background-color: var(--White);
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+}
+
+.testimonials__name {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 0.8125rem;
+    color: #FFFFFF;
+    padding-top: 1.625rem;
+}
+
+.testimonials__status {    
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 0.8125rem;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.testimonials__name-dark {   
+    color: #48556A;
+}
+
+.testimonials__status-dark {
+    color: #48556A;
+}
+
+.testimonials__quote {   
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    padding-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials__quote-dark {    
+    color: #48556A;
+}
+
+.testimonials__quote-padding-sm {
+    padding-bottom: 1rem;
+}
+
+.testimonials__background {   
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;    
+    color: #CFCFCF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 37.5rem) {
+    body {
+        width: 100vw;
+        padding: 0;
+    }
+    
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: 1.5 rem;
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five";
+    }
+
+    .quotation__photo {
+        right: 1.5rem;
+    }
+}
